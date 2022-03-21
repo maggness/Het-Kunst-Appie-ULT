@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../stylesheets/style.css" />
+    <title>Het Kunst Appie</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li>
+            <a href="./"
+              ><img src="../images/logo.png" alt="logo Rijksmuseum"
+            /></a>
+          </li>
+          <li>
+            <!-- Rotation Icon + Info  -->
+            <img
+              src="../images/rotate.png"
+              alt="rotate your phone image"
+              id="rotateInfo"
+            />
+            <section>
+              <p id="rotateInfoText">
+                You can rotate your phone to see artworks without borders.
+              </p>
+            </section>
+          </li>
+          <li>
+            <!-- Search Bar -->
+            <input
+              id="searchInput"
+              type="text"
+              class="searchTerm"
+              autocomplete="off"
+              placeholder="Search for a Master/Artwork"
+            />
+          </li>
+        </ul>
+        <ul id="searchField"></ul>
+      </nav>
+    </header>
+    <main>
+      <ul id="items" class="ArtContentContainer">
+        <% data.map((kunst) => { const img = kunst.webImage.url.slice(0,
+        -3)+"=s1000"%>
+
+        <li class="artSection">
+          <a href="#art/<%= kunst.id %>">
+            <h2>
+              <%= kunst.title %> <br />
+              <i> <%= kunst.principalOrFirstMaker %> </i>
+            </h2>
+            <img src="<%= img %>" />
+          </a>
+        </li>
+        <% }) %>
+      </ul>
+    </main>
+    <footer></footer>
+  </body>
+</html>
