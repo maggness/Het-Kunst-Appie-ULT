@@ -4,7 +4,7 @@ import { itemsSection, searchInputSearchBar } from "./variables.js";
 import { searchError } from "./searchError.js";
 
 // Gets API Data
-export const getAndRenderData = (id) => {
+export const getData = (id) => {
   let searchTerm = searchInputSearchBar.value;
   const apiLink = {
     url: "https://www.rijksmuseum.nl/api/nl/collection?key=2mU4mudb",

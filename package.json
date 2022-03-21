@@ -1,0 +1,23 @@
+{
+  "name": "het-kunst-appie-ult",
+  "version": "1.0.0",
+  "description": "progressive web apps Rijks mussa",
+  "main": "server.js",
+  "directories": {
+    "doc": "docs",
+    "example": "examples"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maggness/Het-Kunst-Appie-ULT.git"
+  },
+  "author": "Tim de Roller",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/maggness/Het-Kunst-Appie-ULT/issues"
+  },
+  "homepage": "https://github.com/maggness/Het-Kunst-Appie-ULT#readme"
+}

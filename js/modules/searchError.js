@@ -1,5 +1,5 @@
 import "./search.js";
-import "./getAndRenderData.js";
+import "./getData.js";
 import {
   searchInputSearchBar,
   itemsSection,
