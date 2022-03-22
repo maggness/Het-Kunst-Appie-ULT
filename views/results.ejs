@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <%- include('./partials/head.ejs') -%>
+  <body>
+    <%- include('./partials/header.ejs') -%>
+    <main>
+      <section>
+        <% data.map((kunst) => { const img = kunst.webImage.url %>
+        <li class="artSectionDetails" id="artDetail">
+          <img src="<%= img %>" />
+          <h2>
+            <%= kunst.title %> <br />
+            <i>- <%= kunst.principalOrFirstMaker %></i>
+            <span>Tap artwork to zoom in</span>
+          </h2>
+        </li>
+        <% }) %>
+      </section>
+    </main>
+    <%- include('./partials/footer.ejs') -%>
+  </body>
+</html>

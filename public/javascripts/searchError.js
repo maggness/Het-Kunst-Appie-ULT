@@ -6,6 +6,15 @@ import {
   artistsForError,
 } from "./variables.js";
 
+const artistsForError = [
+  "Rembrandt",
+  "Vermeer",
+  "Hals",
+  "Cuyp",
+  "Asselijn",
+  "Steen",
+];
+
 // Error screen if there are no results while searching
 export const searchError = (data) => {
   let searchTerm = searchInputSearchBar.value;
