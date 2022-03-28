@@ -5,16 +5,15 @@
     <%- include('./partials/header.ejs') -%>
     <main>
       <section>
-        <% data.map((kunst) => { const img = kunst.webImage.url %>
+        <% const img = data.webImage.url %>
         <li class="artSectionDetails" id="artDetail">
           <img src="<%= img %>" />
           <h2>
-            <%= kunst.title %> <br />
-            <i>- <%= kunst.principalOrFirstMaker %></i>
+            <%= data.title %> <br />
+            <i>- <%= data.principalOrFirstMaker %></i>
             <span>Tap artwork to zoom in</span>
           </h2>
         </li>
-        <% }) %>
       </section>
     </main>
     <%- include('./partials/footer.ejs') -%>

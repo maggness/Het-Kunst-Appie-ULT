@@ -6,7 +6,7 @@ const app = express();
 const port = 3000;
 const apiURL = "https://www.rijksmuseum.nl/api/nl/collection";
 const searchValue = "";
-const artLength = 8;
+let artLength = '10';
 
 require("dotenv").config();
 
@@ -23,9 +23,8 @@ app.use(express.static("public"));
 
 // render home
 app.get("/", (req, res) => {
-  fetch(`${apiURL}?key=${API_KEY}&q=${searchValue}&ps=${artLength}`)
+  fetch(`${apiURL}?key=${API_KEY}&q=${searchValue}&ps=${artLength}&imgonly=true`)
     .then(async (response) => {
-      console.log(searchValue);
       const artWorks = await response.json();
       res.render("index", {
         title: "Home",
@@ -37,20 +36,31 @@ app.get("/", (req, res) => {
 
 // render art detail
 app.get("/art/:id", function (req, res) {
-  fetch(`${apiURL}?key=${API_KEY}&q=${searchValue}&ps=${artLength}`)
+  fetch(`${apiURL}/${req.params.id}?key=${API_KEY}&imgonly=true`)
     .then(async (response) => {
       const artWorks = await response.json();
-      const result = artWorks.artObjects.filter(
-        (item) => item.id === req.params.id
-      );
-
+      console.log(req.params.id);
       res.render("results", {
-        title: "Results" + req.params.id,
-        data: result,
+        title: "Artwork: " + req.params.id,
+        data: artWorks.artObject,
       });
     })
     .catch((err) => res.send(err));
 });
+
+
+app.get('/search', (req, res) => {
+  const searchValue = req.query.q
+  fetch(`${apiURL}?key=${API_KEY}&q=${searchValue}&ps=${artLength}&imgonly=true`)
+  .then(async (response) => {
+    const artWorks = await response.json();
+    res.render("index", {
+      title: "Results for " + searchValue,
+      data: artWorks.artObjects,
+    });
+  })
+  .catch((err) => res.send(err));
+})
 
 app.listen(port, () => {
   console.log(

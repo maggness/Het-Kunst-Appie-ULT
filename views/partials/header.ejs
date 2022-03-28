@@ -21,13 +21,17 @@
         </li>
         <li>
           <!-- Search Bar -->
-          <input
+          <!-- <input
             id="searchInput"
             type="text"
             class="searchTerm"
             autocomplete="off"
             placeholder="Search for a Master/Artwork"
-          />
+          /> -->
+
+          <form method="get" action="/search" search-form>
+            <input type="search" id="search" name="q" search-input class="searchTerm" autocomplete="off" placeholder="Search for a Master/Artwork"/>
+        </form>
         </li>
       </ul>
       <ul id="searchField"></ul>

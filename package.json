@@ -8,7 +8,7 @@
     "example": "examples"
   },
   "scripts": {
-    "start": "nodemon app.js"
+    "start": "node-dev app.js"
   },
   "repository": {
     "type": "git",
@@ -28,6 +28,7 @@
     "request": "^2.88.2"
   },
   "devDependencies": {
+    "node-dev": "^7.3.0",
     "nodemon": "^2.0.15"
   }
 }

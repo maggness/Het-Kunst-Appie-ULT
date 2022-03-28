@@ -50,7 +50,7 @@ header {
   }
   
   header nav input {
-    width: 96%;
+    width: 100%;
     border: none;
     height: 4vh;
     position: fixed;
