@@ -7,6 +7,9 @@
     "doc": "docs",
     "example": "examples"
   },
+  "engines": {
+    "node": "14.17.6"
+  },
   "scripts": {
     "start": "node-dev app.js"
   },

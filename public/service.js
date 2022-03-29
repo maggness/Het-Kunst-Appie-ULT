@@ -1,13 +1,14 @@
 const CORE_CACHE_VERSION = 'v1'
 const CORE_ASSETS = [
   '/offline',
-  '../stylesheets/style.css',
-  '../stylesheets/desktop.css',
-  '../stylesheets/mobileLandscape.css',
-  '../stylesheets/mobile.css',
-  '../javascripts/main.js',
-  '../javascripts/artworkZoom.js',
-  '../images/logo.png',
+  '/stylesheets/style.css',
+  '/stylesheets/desktop.css',
+  '/stylesheets/mobileLandscape.css',
+  '/stylesheets/mobile.css',
+  '/javascripts/main.js',
+  '/javascripts/artworkZoom.js',
+  '/images/logo.png',
+  '/images/rotate.png',
   'manifest.json',
 ]
 
@@ -21,8 +22,9 @@ self.addEventListener('install', event => {
   );
 })
 
-self.addEventListener('activate', () => {
+self.addEventListener('activate', event => {
   console.log('activating')
+  event.waitUntil(clients.claim());
 })
 
 self.addEventListener('fetch', (event) => {
@@ -34,14 +36,25 @@ self.addEventListener('fetch', (event) => {
       caches.open(CORE_CACHE_VERSION)
         .then(cache => cache.match(event.request.url))
     )
-  } else if (isHtmlGetRequest(event.request)) {
+  } if (isHtmlGetRequest(event.request)) {
     console.log('html get request', event.request.url)
     // generic fallback
     event.respondWith(
-
       caches.open('html-cache')
         .then(cache => cache.match(event.request.url))
         .then(response => response ? response : fetchAndCache(event.request, 'html-cache'))
+        .catch(e => {
+          return caches.open(CORE_CACHE_VERSION)
+            .then(cache => cache.match('/offline'))
+        })
+    )
+  } else if (isCssGetRequest(event.request)) {
+    console.log('Css get request', event.request.url)
+    // generic fallback
+    event.respondWith(
+      caches.open('css-cache')
+        .then(cache => cache.match(event.request.url))
+        .then(response => response ? response : fetchAndCache(event.request, 'css-cache'))
         .catch(e => {
           return caches.open(CORE_CACHE_VERSION)
             .then(cache => cache.match('/offline'))
@@ -71,6 +84,16 @@ function fetchAndCache(request, cacheName) {
  */
 function isHtmlGetRequest(request) {
   return request.method === 'GET' && (request.headers.get('accept') !== null && request.headers.get('accept').indexOf('text/html') > -1);
+}
+
+/**
+ * Checks if a request is a GET and HTML request
+ *
+ * @param {Object} request        The request object
+ * @returns {Boolean}            Boolean value indicating whether the request is a GET and HTML request
+ */
+ function isCssGetRequest(request) {
+  return request.method === 'GET' && (request.headers.get('accept') !== null && request.headers.get('accept').indexOf('text/css') > -1);
 }
 
 /**
