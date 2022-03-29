@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="nl">
-  <%- include('./partials/head.ejs') -%>
+  <%- include('./partials/head') -%>
   <body>
-    <%- include('./partials/header.ejs') -%>
+    <%- include('./partials/header') -%>
     <main>
       <ul id="items" class="ArtContentContainer">
           <% data.map((kunst) => { const img = kunst.webImage.url.slice(0,-3)+"=s1000"%>
@@ -19,6 +19,6 @@
           <% }) %>
       </ul>
     </main>
-    <%- include('./partials/footer.ejs') -%>
+    <%- include('./partials/footer') -%>
   </body>
 </html>

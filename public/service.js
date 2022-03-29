@@ -1,26 +1,31 @@
-const CORE_CACHE_VERSION = 'v3'
+const CORE_CACHE_VERSION = 'v1'
 const CORE_ASSETS = [
   '/offline',
-  '/index.css',
-  '/main.js',
+  '../stylesheets/style.css',
+  '../stylesheets/desktop.css',
+  '../stylesheets/mobileLandscape.css',
+  '../stylesheets/mobile.css',
+  '../javascripts/main.js',
+  '../javascripts/artworkZoom.js',
+  '../images/logo.png',
+  'manifest.json',
 ]
 
 self.addEventListener('install', event => {
-  console.log('Installing service worker')
+  console.log('installing')
 
   event.waitUntil(
     caches.open(CORE_CACHE_VERSION).then(function(cache) {
       return cache.addAll(CORE_ASSETS).then(() => self.skipWaiting());
     })
   );
-});
+})
 
-self.addEventListener('activate', event => {
-  console.log('Activating service worker')
-  event.waitUntil(clients.claim());
-});
+self.addEventListener('activate', () => {
+  console.log('activating')
+})
 
-self.addEventListener('fetch', event => {
+self.addEventListener('fetch', (event) => {
   console.log('Fetch event: ', event.request.url);
   if (isCoreGetRequest(event.request)) {
     console.log('Core get request: ', event.request.url);
@@ -43,7 +48,7 @@ self.addEventListener('fetch', event => {
         })
     )
   }
-});
+})
 
 function fetchAndCache(request, cacheName) {
   return fetch(request)
@@ -88,4 +93,3 @@ function getPathName(requestUrl) {
   const url = new URL(requestUrl);
   return url.pathname;
 }
-

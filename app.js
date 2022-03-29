@@ -47,6 +47,11 @@ app.get("/art/:id", function (req, res) {
     .catch((err) => res.send(err));
 });
 
+app.get('/offline', (req, res) => {
+  res.render("offline", {
+    title: "You are Offline"
+  });
+})
 
 app.get('/search', (req, res) => {
   const searchValue = req.query.q
