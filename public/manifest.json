@@ -1,0 +1,31 @@
+{
+    "short_name": "HKA",
+    "name": "Het Kunst Appie",
+    "icons": [
+      {
+        "src": "/images/logomobile.png",
+        "type": "image",
+        "sizes": "510x510"
+      },
+      {
+        "src": "/images/logomobile192.png",
+        "type": "image/png",
+        "sizes": "192x192"
+      }
+    ],
+    "start_url": "/",
+    "background_color": "black",
+    "display": "standalone",
+    "scope": "/",
+    "theme_color": "black",
+    "shortcuts": [
+      {
+        "name": "Het Kunst Appie Home",
+        "short_name": "Home",
+        "description": "Home of Het Kunst Appie",
+        "url": "/",
+        "icons": [{ "src": "/images/logomobile.png", "sizes": "510x510" }]
+      }
+    ],
+    "description": "App Results"
+  }

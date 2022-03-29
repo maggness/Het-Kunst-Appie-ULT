@@ -39,7 +39,6 @@ app.get("/art/:id", function (req, res) {
   fetch(`${apiURL}/${req.params.id}?key=${API_KEY}&imgonly=true`)
     .then(async (response) => {
       const artWorks = await response.json();
-      console.log(req.params.id);
       res.render("results", {
         title: "Artwork: " + req.params.id,
         data: artWorks.artObject,

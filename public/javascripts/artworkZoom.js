@@ -1,3 +1,5 @@
+if (window.location.href.indexOf("art") > -1) { 
+
 // Zoom for artwork
 let artWorkScale = 1;
 const detailItemSection = document.querySelector("#artDetail");
@@ -15,4 +17,4 @@ const zoomInArtwork = () => {
 };
 
 detailItemSection.addEventListener("click", zoomInArtwork);
-// }
+}
