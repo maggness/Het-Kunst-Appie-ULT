@@ -2,7 +2,7 @@
 
 Voor mijn minor web maak ik met de API van het Rijksmuseam een applicatie waar je kan zoeken naar verschillende objecten uit deze API.
 
-Het Kunst Appie is te zien via deze link: (https://maggness.github.io/Het-Kunst-Appie/HetKunstAppie/)
+Je kan dit niet via github pages bekijken, dit moet je local runnen
 
 ![Front-end frontpage image](https://user-images.githubusercontent.com/30145681/157264964-a8900826-9802-4eb3-a5a7-f0be3a5e7089.png)
 
