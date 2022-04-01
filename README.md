@@ -20,7 +20,7 @@ Met deze app kan je zoeken naar objecten uit de database van het Rijksmuseum. Je
 
 ## Install the project
 
-Om dit project local te laten draaien kun je dit project clone met: `gh repo clone maggness/Het-Kunst-Appie`. Draai de code op een local server, anders werken de modules niet. (Je kan de "go live" extention van Visual Studio Code gebruiken)
+Om dit project local te laten draaien kun je dit project clone met: `gh repo clone maggness/Het-Kunst-Appie-ult`. Draai de code op een local server, anders werken de modules niet. (Je kan de "go live" extention van Visual Studio Code gebruiken)
 
 Ook moet je de API key veranderen naar je eigen key. die staat in de URL na `key=`
 
