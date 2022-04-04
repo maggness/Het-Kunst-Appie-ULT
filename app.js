@@ -1,12 +1,10 @@
-const hostname = "127.0.0.1";
 const express = require("express");
 const fetch = require("node-fetch");
-const request = require("request");
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 6969;
 const apiURL = "https://www.rijksmuseum.nl/api/nl/collection";
 const searchValue = "";
-let artLength = '10';
+let artLength = "10";
 
 require("dotenv").config();
 
@@ -23,7 +21,9 @@ app.use(express.static("public"));
 
 // render home
 app.get("/", (req, res) => {
-  fetch(`${apiURL}?key=${API_KEY}&q=${searchValue}&ps=${artLength}&imgonly=true`)
+  fetch(
+    `${apiURL}?key=${API_KEY}&q=${searchValue}&ps=${artLength}&imgonly=true`
+  )
     .then(async (response) => {
       const artWorks = await response.json();
       res.render("index", {
@@ -47,27 +47,29 @@ app.get("/art/:id", function (req, res) {
     .catch((err) => res.send(err));
 });
 
-app.get('/offline', (req, res) => {
+app.get("/offline", (req, res) => {
   res.render("offline", {
-    title: "You are Offline"
+    title: "You are Offline",
   });
-})
+});
 
-app.get('/search', (req, res) => {
-  const searchValue = req.query.q
-  fetch(`${apiURL}?key=${API_KEY}&q=${searchValue}&ps=${artLength}&imgonly=true`)
-  .then(async (response) => {
-    const artWorks = await response.json();
-    res.render("index", {
-      title: "Results for " + searchValue,
-      data: artWorks.artObjects,
-    });
-  })
-  .catch((err) => res.send(err));
-})
+app.get("/search", (req, res) => {
+  const searchValue = req.query.q;
+  fetch(
+    `${apiURL}?key=${API_KEY}&q=${searchValue}&ps=${artLength}&imgonly=true`
+  )
+    .then(async (response) => {
+      const artWorks = await response.json();
+      res.render("index", {
+        title: "Results for " + searchValue,
+        data: artWorks.artObjects,
+      });
+    })
+    .catch((err) => res.send(err));
+});
 
 app.listen(port, () => {
   console.log(
-    `Lekker man, hij is hier te vinden: http://${hostname}:${port}/, zo niet zoek het uit.`
+    `Lekker man, hij is hier te vinden: http://127.0.0.1:${port}/, zo niet zoek het uit.`
   );
 });

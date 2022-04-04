@@ -11,7 +11,9 @@
     "node": "14.17.6"
   },
   "scripts": {
-    "start": "node-dev app.js"
+    "server": "node app.js",
+    "start": "node app.js",
+    "run": "nodemon app.js"
   },
   "repository": {
     "type": "git",
