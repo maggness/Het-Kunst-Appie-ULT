@@ -14,15 +14,17 @@ As an art lover, I want to be able to search and view art from the Rijksmuseum a
 
 Met deze app kan je zoeken naar objecten uit de database van het Rijksmuseum. Je kan op de kunstwerken drukken en zo kom je op een detail pagina met wat langere informatie over dat kunstwerk. Ook kan je inzoomen op het kunstwerk. Als je op mobiel kijkt en je het scherm naar landscape modus brengt gaat de UI weg en zie je het kunstwerk nog beter, ook hier kun je inzoomen.
 
-## Activity Diagram
-
-![ActivityDiagramv2](https://user-images.githubusercontent.com/30145681/157262389-a4c0351b-0c98-4d8f-a094-7c6c11686c94.png)
-
 ## Install the project
 
-Om dit project local te laten draaien kun je dit project clone met: `gh repo clone maggness/Het-Kunst-Appie-ult`. Draai de code op een local server, anders werken de modules niet. (Je kan de "go live" extention van Visual Studio Code gebruiken)
+Om dit te runnen moet je node & npm hebben geinstalleerd.
+
+Om dit project local te laten draaien kun je dit project clone met: `gh repo clone maggness/Het-Kunst-Appie-ULT`. Draai de code op een local server, anders werken de modules niet.
+
+Vergeet niet `npm install` te gebruiken om de node modules te installeren.
 
 Ook moet je de API key veranderen naar je eigen key. die staat in de URL na `key=`
+
+Run de applicatie op je localhost:6969, dit kan je doen met `npm start`.
 
 ## API 
 
@@ -30,9 +32,8 @@ De Rijks Data API is vrij te gebruiken en op https://data.rijksmuseum.nl/object-
 
 ## Future features
 
-- Loadmore button om meer dan 8 items te laten zien.
+- Loadmore button om meer dan 10 items te laten zien.
 - Hinting search om het zoeken nog makkelijker & beter te maken.
-- Uitzoeken waarom het zoeken werkt tot 3 karakters, daarna gaat het raar doen
 - Zoom functie verbeteren
 - Improved UI
 - Improve Error/Loading state
