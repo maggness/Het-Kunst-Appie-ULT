@@ -43,6 +43,7 @@
     header nav ul:first-of-type li img {
       width: 30%;
       padding-left: 3%;
+      height: auto;
     }
   
     .loading div {

@@ -111,6 +111,7 @@ header {
   header nav ul:first-of-type li img {
     width: 50%;
     padding: 4% 0 0% 5%;
+    height: auto;
   }
   
   header nav ul:first-of-type li:last-of-type img {

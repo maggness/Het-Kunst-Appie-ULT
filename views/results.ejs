@@ -5,17 +5,17 @@
     <%- include('./partials/header') -%>
     <main>
       <section>
-        <% const img = data.webImage.url %>
-        <li class="artSectionDetails" id="artDetail">
-          <img src="<%= img %>" />
+        <% const img = data.webImage.url.slice(0,-3)+"=s10000" %>
+        <section class="artSectionDetails" id="artDetail">
+          <img src="<%= img %>" alt="<%= data.title %>" width="100vmin" height="auto"/>
           <h2>
             <%= data.title %> <br />
             <i>- <%= data.principalOrFirstMaker %></i>
             <span>Tap artwork to zoom in</span>
           </h2>
-        </li>
+        </section>
       </section>
     </main>
-    <%- include('./partials/footer') -%>
+    <%- include('./partials/footer') -%> 
   </body>
 </html>
