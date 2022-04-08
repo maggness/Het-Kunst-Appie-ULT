@@ -90,6 +90,7 @@ De Rijks Data API is vrij te gebruiken en op https://data.rijksmuseum.nl/object-
 - Zoom functie verbeteren
 - Improved UI
 - Improve Error/Loading state
+- Dynamische slice(0,-3)+"=s1000"
 
 ## Licence
 
