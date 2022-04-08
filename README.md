@@ -71,6 +71,14 @@ De performace bij de detail pagina is alleen wat minder, dit komt omdat ik een h
 
 De service worker slaat de `CORE_ASSETS` bestanden op in de cache onder de naam die gegeven is in `CORE_CACHE_VERSION`. Hier haalt hij offline de styling, js, offline pagina &  2 foto's op. Ook slaat hij appart de html pagina's op waar je op komt, zo kan je de pagina's die je al bezocht heb offline bekijken. Als je offline op een pagina komt die je nog niet heb bekeken kom je op de offline versie, dan staat er dat je offline bent en de pagina niet kunt zien.
 
+## Optimalisaties
+
+Om de images op de home pagina sneller in te laten laden heb ik de images met `slice(0,-3)+"=s1000"` aangeroepen. Zo stel je in hoeveel pixels de foto zal hebben. Dit heb ik bij de detail pagina niet gedaan omdat je hier op de foto's kunt inzoomen. In een latere versie van de app wil ik eerst de foto's met lage pixels inladen en dan de grote foto's renderen. 
+
+De pagina's worden gecached zodat deze grote foto's sneller geladen zijn als je ze al een keer geladen heb.
+
+De client javascript heeft `defer` in de script tag zo moet de css niet wachten op de js om in te laden, hierdoor zie je de styling sneller.
+
 ## API 
 
 De Rijks Data API is vrij te gebruiken en op https://data.rijksmuseum.nl/object-metadata/api/ te vinden. Meer informatie over deze API is te vinden op: https://data.rijksmuseum.nl/
