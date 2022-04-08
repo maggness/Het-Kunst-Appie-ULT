@@ -30,6 +30,36 @@ Run de applicatie op je localhost:6969, dit kan je doen met `npm start`.
 
 ![Activity diagram](https://user-images.githubusercontent.com/30145681/162405058-534676fd-cc59-4bb0-ac4e-8409a60c7271.png)
 
+## Snelheid vergelijking WAFS/PWA
+
+### WAFS Snelheid
+
+(WAFS) Snelheid van de het kunst appie op mobiel: 
+
+![image](https://user-images.githubusercontent.com/30145681/161752912-dc3fa21d-e44a-4fdf-9dbf-e94b4bdd0f7f.png)
+
+(WAFS) Snelheid van de het kunst appie op desktop: 
+
+![image](https://user-images.githubusercontent.com/30145681/161753076-278046a9-297c-48c1-b48b-8bb84db3bd2a.png)
+
+### PWA Snelheid
+
+(PWA) Snelheid van de het kunst appie ULT op mobiel: 
+
+![image](https://user-images.githubusercontent.com/30145681/161752352-74b4eab9-02ac-41cb-a6b7-406d33a42e1c.png)
+
+(PWA) Snelheid van de het kunst appie ULT op desktop:
+
+![image](https://user-images.githubusercontent.com/30145681/161754275-bec15155-12ae-483e-ba4b-30d639cc3f3b.png)
+
+
+### Snelheid detail
+
+![image](https://user-images.githubusercontent.com/30145681/161754026-3a83f2d6-3a52-4d8c-969e-feb917388870.png)
+
+De performace bij de detail pagina is alleen wat minder, dit komt omdat ik een hele grote afbelding inlaad. Dit doe ik omdat je in kan zoomen op de foto om het kunstwerk in meer detail te bekijken.
+
+
 ## API 
 
 De Rijks Data API is vrij te gebruiken en op https://data.rijksmuseum.nl/object-metadata/api/ te vinden. Meer informatie over deze API is te vinden op: https://data.rijksmuseum.nl/
