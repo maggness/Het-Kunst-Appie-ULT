@@ -33,7 +33,7 @@ Je kan de app op je telefoon of desktop installeren, doe dit via deze link: http
 
 ## Activity Diagram
 
-![Activity diagram](https://user-images.githubusercontent.com/30145681/162405058-534676fd-cc59-4bb0-ac4e-8409a60c7271.png)
+![Activity Diagram](https://user-images.githubusercontent.com/30145681/162433702-7b9e2509-9ff7-4fca-95f8-14fe86fcd5dc.png)
 
 ## Snelheid vergelijking WAFS/PWA
 
