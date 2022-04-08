@@ -67,9 +67,9 @@ De performace bij de detail pagina is alleen wat minder, dit komt omdat ik een h
 ### App netwerk loading
 ![netwerk loading](https://user-images.githubusercontent.com/30145681/162408131-77c8e5be-24a5-44b2-a4fc-682493063a50.png)
 
-## Server side rendering
+## Service worker
 
-Met server side rendering 
+De service worker slaat de `CORE_ASSETS` bestanden op in de cache onder de naam die gegeven is in `CORE_CACHE_VERSION`. Hier haalt hij offline de styling, js, offline pagina &  2 foto's op. Ook slaat hij appart de html pagina's op waar je op komt, zo kan je de pagina's die je al bezocht heb offline bekijken. Als je offline op een pagina komt die je nog niet heb bekeken kom je op de offline versie, dan staat er dat je offline bent en de pagina niet kunt zien.
 
 ## API 
 
