@@ -26,6 +26,10 @@ Ook moet je de API key veranderen naar je eigen key. die staat in de URL na `key
 
 Run de applicatie op je localhost:6969, dit kan je doen met `npm start`.
 
+## Activity Diagram
+
+![Activity diagram](https://user-images.githubusercontent.com/30145681/162405058-534676fd-cc59-4bb0-ac4e-8409a60c7271.png)
+
 ## API 
 
 De Rijks Data API is vrij te gebruiken en op https://data.rijksmuseum.nl/object-metadata/api/ te vinden. Meer informatie over deze API is te vinden op: https://data.rijksmuseum.nl/
