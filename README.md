@@ -26,6 +26,11 @@ Ook moet je de API key veranderen naar je eigen key. die staat in de URL na `key
 
 Run de applicatie op je localhost:6969, dit kan je doen met `npm start`.
 
+## Install the app
+
+Je kan de app op je telefoon of desktop installeren, doe dit via deze link: https://het-kunst-appie.herokuapp.com/
+ 
+
 ## Activity Diagram
 
 ![Activity diagram](https://user-images.githubusercontent.com/30145681/162405058-534676fd-cc59-4bb0-ac4e-8409a60c7271.png)
@@ -59,6 +64,12 @@ Run de applicatie op je localhost:6969, dit kan je doen met `npm start`.
 
 De performace bij de detail pagina is alleen wat minder, dit komt omdat ik een hele grote afbelding inlaad. Dit doe ik omdat je in kan zoomen op de foto om het kunstwerk in meer detail te bekijken.
 
+### App netwerk loading
+![netwerk loading](https://user-images.githubusercontent.com/30145681/162408131-77c8e5be-24a5-44b2-a4fc-682493063a50.png)
+
+## Server side rendering
+
+Met server side rendering 
 
 ## API 
 
